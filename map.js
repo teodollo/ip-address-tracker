@@ -18,7 +18,8 @@ function runMap() {
         if(e.currentTarget.readyState == 4 && e.currentTarget.status == 200) {
             const object = JSON.parse(Http.responseText);
             
-            var map = L.map('map').setView([object.location.lat, object.location.lng], 14);
+            document.getElementById('map-container').innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
+            let map = L.map('map').setView([object.location.lat, object.location.lng], 16);
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=avotrdWWFNvP4VidXL8k',{
             tileSize: 512,
             zoomOffset: -1,
