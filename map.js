@@ -17,21 +17,16 @@ function runMap() {
     Http.onreadystatechange = (e) => {
         if(e.currentTarget.readyState == 4 && e.currentTarget.status == 200) {
             const object = JSON.parse(Http.responseText);
-            const objectIp= object.ip;
-            console.log(object)
-            console.log(object.ip)
             
-
-            
-            var mapid = L.map('map').setView([object.location.lat, object.location.lng], 14);
+            var map = L.map('map').setView([object.location.lat, object.location.lng], 14);
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=avotrdWWFNvP4VidXL8k',{
             tileSize: 512,
             zoomOffset: -1,
             minZoom: 1,
             crossOrigin: true
-            }).addTo(mapid);
+            }).addTo(map);
         
-            L.marker([object.location.lat, object.location.lng]).addTo(mapid)
+            L.marker([object.location.lat, object.location.lng]).addTo(map)
                 .openPopup();
 
 
