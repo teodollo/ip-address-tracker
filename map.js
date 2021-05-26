@@ -32,7 +32,8 @@ function runMap() {
     Http.onreadystatechange = (e) => {
         
         if(e.currentTarget.readyState == 4 && e.currentTarget.status == 200) {
-            const ipInformation = JSON.parse(Http.responseText);
+            const ipInformation = JSON.parse(Http.responseText);//parsing the JSON string to an object
+
             //makes sure the div containing the map always gets cleared when searching for new ip
             document.getElementById('map-container').innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
 
