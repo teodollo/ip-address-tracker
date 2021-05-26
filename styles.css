@@ -1,7 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+}
+
 #map { 
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    margin-top: 27vh;
+    z-index: 0;
 }
+
+#search-field{
+    padding-top: 4vh;
+    background: url('images/pattern-bg.png');
+    background-repeat: none;
+    height: 27vh;
+    justify-content: center;
+}
+
+h1{
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+#ip-search{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0;
+    text-align: center;
+    padding-left: 5vw;
+    margin-top: 4vh;
+}
+
+#input{
+    font-weight: 400;
+    padding: 2vh 2vw 2vh 8vw;
+    border-radius: 15px 0 0 15px;
+    width: 67vw;
+    border: none;
+    outline: none;
+}
+
+#submit{
+    background: black;
+    padding: 2.6vh 5vw;
+    border-radius: 0 15px 15px 0;
+    outline: none;
+}
+
+#ip-info{
+    display: none;
+    position: relative;
+    z-index: 1;
+    background: white;
+    text-align: center;
+    width: 85vw;
+    border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    padding: 2vh 0 
+}
+
+.ip-info-head{
+    color: hsl(0, 0%, 59%);
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.ip-info-p{
+    color: hsl(0, 0%, 17%);
+    font-weight: 700;
+}
+
