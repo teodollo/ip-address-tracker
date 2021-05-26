@@ -13,11 +13,10 @@ function runMap() {
     url += IP;
     Http.open('GET', url);
     Http.send();
-
     Http.onreadystatechange = (e) => {
+        
         if(e.currentTarget.readyState == 4 && e.currentTarget.status == 200) {
             const object = JSON.parse(Http.responseText);
-            
             document.getElementById('map-container').innerHTML = "<div id='map' style='width: 100%; height: 100%;'></div>";
             let map = L.map('map').setView([object.location.lat, object.location.lng], 16);
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=avotrdWWFNvP4VidXL8k',{
@@ -37,6 +36,8 @@ function runMap() {
             isp.textContent = `${object.isp}`;
             ipInfo.style.display = 'block';
 
+        } else if (e.target.readyState == 4 && e.currentTarget.status != 200) {
+            alert('Provide a valid IP Address')
         }
 
 
