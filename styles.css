@@ -105,10 +105,11 @@ h1{
         grid-template-columns: repeat(4, 1fr);
         width: 80vw;
         padding: 1vh 0;
-        height: 9vh;
+        height: 12vh;
     }
 
     .ip-info-head{
+        margin-top: 0;
         margin-bottom: 0.5vh;
     }
 
@@ -119,11 +120,22 @@ h1{
         border-right:hsl(0, 0%, 59%) 1px solid;
         margin-right: 2vw;
         margin-top: 0.5vh;
-        height: 8vh;
+        height: 11vh;
     }
 
     .ip-section:nth-child(4) {
         border-right: none;
     }
+}
+
+@media  screen and (min-width: 1300px) {
+    .ip-section{
+        height: 8vh;
+    }
+
+    #ip-info{
+        height: 9vh;
+    }
+    
 }
 
