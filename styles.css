@@ -104,11 +104,25 @@ h1{
         display: none;
         grid-template-columns: repeat(4, 1fr);
         width: 80vw;
+        padding: 1vh 0;
+        height: 8vh;
+    }
+
+    .ip-info-head{
+        margin-bottom: 0.5vh;
     }
 
     .ip-section{
         text-align: left;
         justify-content:space-evenly;
+        margin-left: 2vw;
+        border-right:hsl(0, 0%, 59%) 1px solid;
+        margin-right: 2vw;
+        height: 8vh;
+    }
+
+    .ip-section:nth-child(4) {
+        border-right: none;
     }
 }
 
