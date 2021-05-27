@@ -18,7 +18,8 @@
 #search-field{
     padding-top: 4vh;
     background: url('images/pattern-bg.png');
-    background-repeat: none;
+    background-repeat:repeat;
+    background-size: auto;
     height: 27vh;
     justify-content: center;
 }
@@ -35,7 +36,7 @@ h1{
     grid-template-columns: 1fr 1fr;
     column-gap: 0;
     text-align: center;
-    padding-left: 5vw;
+    padding-left: 6vw;
     margin-top: 4vh;
 }
 
@@ -62,6 +63,7 @@ h1{
     background: white;
     text-align: center;
     width: 85vw;
+    max-width: 412px;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
@@ -85,7 +87,7 @@ h1{
     font-size: 19px;
 }
 
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: 1024px) {
     #ip-search{
         padding-left: 22vw;
         margin: 2vh 0 4vh;
@@ -104,8 +106,9 @@ h1{
         display: none;
         grid-template-columns: repeat(4, 1fr);
         width: 80vw;
+        max-width: none;
         padding: 1vh 0;
-        height: 12vh;
+        height: auto;
     }
 
     .ip-info-head{
@@ -120,7 +123,7 @@ h1{
         border-right:hsl(0, 0%, 59%) 1px solid;
         margin-right: 2vw;
         margin-top: 0.5vh;
-        height: 11vh;
+        height: auto;
     }
 
     .ip-section:nth-child(4) {
@@ -129,13 +132,7 @@ h1{
 }
 
 @media  screen and (min-width: 1300px) {
-    .ip-section{
-        height: 8vh;
-    }
 
-    #ip-info{
-        height: 9vh;
-    }
     
 }
 
