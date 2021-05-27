@@ -85,3 +85,30 @@ h1{
     font-size: 19px;
 }
 
+@media screen and (min-width: 1023px) {
+    #ip-search{
+        padding-left: 22vw;
+        margin: 2vh 0 4vh;
+    }
+
+    #input{
+        width: 39vw;
+    }
+
+    #submit{
+        padding: 2.6vh 2vw;
+        width: 1.3vw;
+    }
+
+    #ip-info{
+        display: none;
+        grid-template-columns: repeat(4, 1fr);
+        width: 80vw;
+    }
+
+    .ip-section{
+        text-align: left;
+        justify-content:space-evenly;
+    }
+}
+
