@@ -71,5 +71,5 @@ const ipInfoChange = (ipInformation) => {
     regionAndCity.textContent = `${ipInformation.location.region}, ${ipInformation.location.city} ${ipInformation.location.postalCode}`;
     timeZone.textContent = `UTC ${ipInformation.location.timezone}`;
     isp.textContent = `${ipInformation.isp}`;
-    ipInfo.style.display = 'block'; //ipInfo container's will be displayed as block when Ipinfo is available
+    ipInfo.style.display = 'grid'; //ipInfo container's will be displayed as block when Ipinfo is available
 }
