@@ -26,7 +26,7 @@ function runMap() {
     url += IP // adding the input value that should be an ip address to end of API url
 
     fetch(url) // fetch API url
-    .then(data=>{return data.json()}) // convert json string to readable object
+    .then(data=>{return data.json()}) // convert json to readable JavaScript Object
     .then(JSONToObject=>{return JSONToObject}) // return the object that becomes ipInformation
     .then(ipInformation=>{
         if (ipInformation.ip) { // if the object contains an ip run the functions
